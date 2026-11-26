@@ -5,8 +5,7 @@ on:
       - main
       
 
-  pull: 
-    
+  pull_request: 
     branches:
       - main
       - feature/pr_demo

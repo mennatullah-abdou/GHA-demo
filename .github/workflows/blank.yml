@@ -6,6 +6,11 @@ on:
       
 
   pull_request: 
+
+    types:
+      - opened
+      - synchronize
+      - opened
     branches:
       - main
       - feature/pr_demo
@@ -27,6 +32,6 @@ jobs:
   needs: test
   steps:
    - name: deploy step
-     run: echo "deply"
+     run: echo "deply, iam ${{vars.MY_NAME}}"
     
       

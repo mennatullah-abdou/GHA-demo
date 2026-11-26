@@ -1,5 +1,15 @@
 name: Hello-World!
-on: workflow_dispatch
+on:
+  push:
+    branches: 
+      - main
+      
+
+  pull: 
+    
+    branches:
+      - main
+      - feature/pr_demo
 jobs:
  build: 
    runs-on: ubuntu-latest

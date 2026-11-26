@@ -1,5 +1,19 @@
 name: Hello-World!
-on: workflow_dispatch
+on:
+  push:
+    branches: 
+      - main
+      
+
+  pull_request: 
+
+    types:
+      - opened
+      - synchronize
+      - opened
+    branches:
+      - main
+      - feature/pr_demo
 jobs:
  build: 
    runs-on: ubuntu-latest
@@ -18,6 +32,6 @@ jobs:
   needs: test
   steps:
    - name: deploy step
-     run: echo "deply"
+     run: echo "deply, iam ${{vars.MY_NAME}}"
     
       
